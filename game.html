@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="./js/controler.js" defer></script>
+    <script src="./js/game-controler.js" defer></script>
+
+    <link rel="stylesheet" href="./game-style.css">
+
     <title>Jogo da Velha</title>
   </head>
   <body>
@@ -11,20 +17,20 @@
     </header>
     <main>
       <section class="game-board">
-        <article class="row">
-          <div class="cell" data-index="A0"></div>
-          <div class="cell" data-index="A1"></div>
-          <div class="cell" data-index="A2"></div>
+        <article class="column">
+          <div class="cell" id="A0"></div>
+          <div class="cell" id="A1"></div>
+          <div class="cell" id="A2"></div>
         </article>
-        <article class="row">
-          <div class="cell" data-index="B1"></div>
-          <div class="cell" data-index="B2"></div>
-          <div class="cell" data-index="B3"></div>
+        <article class="column">
+          <div class="cell" id="B1"></div>
+          <div class="cell" id="B2"></div>
+          <div class="cell" id="B3"></div>
         </article>
-        <article class="row">
-          <div class="cell" data-index="C1"></div>
-          <div class="cell" data-index="C2"></div>
-          <div class="cell" data-index="C3"></div>
+        <article class="column">
+          <div class="cell" id="C1"></div>
+          <div class="cell" id="C2"></div>
+          <div class="cell" id="C3"></div>
         </article>
       </section>
     </main>
