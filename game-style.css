@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: Roboto;
+  font-weight: 500;
 }
 body {
   width: 100vw;
@@ -13,10 +18,43 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  background-color: #f7f7f7;
+}
+#scoreboard {
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+
+  font-size: 1.1rem;
+}
+#scores-box {
+  width: 4rem;
+  height: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+
+  background-color: #fdfdfd;
 }
 .game-board {
   display: flex;
   flex-direction: row;
+
+  border-radius: 1.5rem;
+
+  box-shadow: 0 0 10px #e4e3e3;
+
+  background-image: url("./assets/grid.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-color: #fdfdfd;
 }
 .cell {
   width: 10rem;
@@ -28,8 +66,8 @@ body {
 
   font-size: 4rem;
 
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 .cell > img {
-    width: 5rem;
+  width: 5rem;
 }

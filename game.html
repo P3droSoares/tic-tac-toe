@@ -8,14 +8,23 @@
     <script src="./js/game-controler.js" defer></script>
 
     <link rel="stylesheet" href="./game-style.css">
-
+    
     <title>Jogo da Velha</title>
   </head>
   <body>
     <header>
-      <h1>Jogo da Velha Game</h1>
+      <h1>Jogo da Velha</h1>
     </header>
     <main>
+      <section id="scoreboard">
+        <p id="player1">Greg</p>
+        <article id="scores-box">
+          <p id="player1-score">0</p>
+          <span>-</span>
+          <p id="player2-score">0</p>
+        </article>
+        <p id="player2">Rowley</p>
+      </section>
       <section class="game-board">
         <article class="column">
           <div class="cell" id="A0"></div>
