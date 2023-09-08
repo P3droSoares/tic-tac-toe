@@ -4,53 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="./js/controler.js" defer></script>
+    <script src="./js/index.js" defer></script>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
 
-    <title>Jogo da Velha</title>
+    <title>TicTacToe</title>
   </head>
   <body>
-    <h1 class="title">Jogo da Velha</h1>
+    <h1 class="title">TicTacToe</h1>
     <section id="input-names-container">
       <form id="form">
         <div>
-          <label for="name-player1">Jogador 1</label>
-          <input type="text" id="name-player1" required />
-          <label for="X-symbol-player1">X</label>
-          <input
-            type="radio"
-            name="select-symbol-player1"
-            id="X-symbol-player1"
-            value="./assets/XSymbol.svg"
-          />
-          <label for="O-symbol-player1">O</label>
-          <input
-            type="radio"
-            name="select-symbol-player1"
-            id="O-symbol-player1"
-            value="./assets/OSymbol.svg"
-          />
+          <label class="name-label" for="name-player1">Desafiante</label>
+          <input type="text" id="name-player1" required autocomplete="off" />
+          <article id="symbol-box-player1">
+            <section id="X-symbol-box-player1">
+              <label id="X-symbol-player1-label" for="X-symbol-player1"
+                ><img src="./assets/XSymbol.svg"
+              /></label>
+              <input
+                type="radio"
+                name="select-symbol-player1"
+                id="X-symbol-player1"
+                value="./assets/XSymbol.svg"
+              />
+            </section>
+            <section id="O-symbol-box-player1">
+              <label id="O-symbol-player1-label" for="O-symbol-player1"
+                ><img src="./assets/OSymbol.svg"
+              /></label>
+              <input
+                type="radio"
+                name="select-symbol-player1"
+                id="O-symbol-player1"
+                value="./assets/OSymbol.svg"
+              />
+            </section>
+          </article>
         </div>
         <div>
-          <label for="name-player2">Jogador 2</label>
-          <input type="text" id="name-player2" required />
-          <label for="X-symbol-player2">X</label>
-          <input
-            type="radio"
-            name="select-symbol-player2"
-            id="X-symbol-player2"
-            value="x"
-          />
-          <label for="O-symbol-player2">O</label>
-          <input
-            type="radio"
-            name="select-symbol-player2"
-            id="O-symbol-player2"
-            value="o"
-          />
+          <label class="name-label" for="name-player2">Oponente</label>
+          <input type="text" id="name-player2" required autocomplete="off" />
+          <article id="symbol-box-player2">
+            <section id="X-symbol-box-player2">
+              <label id="X-symbol-player2-label" for="X-symbol-player2"
+                ><img src="./assets/XSymbol.svg"
+              /></label>
+              <input
+                type="radio"
+                name="select-symbol-player2"
+                id="X-symbol-player2"
+                value="./assets/XSymbol.svg"
+              />
+            </section>
+            <section id="O-symbol-box-player2">
+              <label id="O-symbol-player2-label" for="O-symbol-player2"
+                ><img src="./assets/OSymbol.svg"
+              /></label>
+              <input
+                type="radio"
+                name="select-symbol-player2"
+                id="O-symbol-player2"
+                value="./assets/OSymbol.svg"
+              />
+            </section>
+          </article>
         </div>
-        <button type="submit" id="start-btn">Começar</button>
+        <button type="submit" id="start-btn">INICIAR</button>
       </form>
     </section>
   </body>

@@ -6,22 +6,34 @@ if (document.getElementById("form")) {
         .getElementById("X-symbol-player2")
         .setAttribute("disabled", "true");
       document.getElementById("O-symbol-player2").removeAttribute("disabled");
+
+      document.getElementById("X-symbol-box-player2").style.opacity = 0.5;
+      document.getElementById("O-symbol-box-player2").style.opacity = 1;
     } else if (document.getElementById("O-symbol-player1").checked) {
       document.getElementById("X-symbol-player2").removeAttribute("disabled");
       document
         .getElementById("O-symbol-player2")
         .setAttribute("disabled", "true");
+
+      document.getElementById("X-symbol-box-player2").style.opacity = 1;
+      document.getElementById("O-symbol-box-player2").style.opacity = 0.5;
     }
     if (document.getElementById("X-symbol-player2").checked) {
       document
         .getElementById("X-symbol-player1")
         .setAttribute("disabled", "true");
       document.getElementById("O-symbol-player1").removeAttribute("disabled");
+
+      document.getElementById("X-symbol-box-player1").style.opacity = 0.5;
+      document.getElementById("O-symbol-box-player1").style.opacity = 1;
     } else if (document.getElementById("O-symbol-player2").checked) {
       document.getElementById("X-symbol-player1").removeAttribute("disabled");
       document
         .getElementById("O-symbol-player1")
         .setAttribute("disabled", "true");
+
+      document.getElementById("X-symbol-box-player1").style.opacity = 1;
+      document.getElementById("O-symbol-box-player1").style.opacity = 0.5;
     }
   });
 
@@ -40,8 +52,7 @@ if (document.getElementById("form")) {
       ).value,
     };
 
-    localStorage.setItem("playersData", JSON.stringify(playersData));
-
-    window.location.href = "game.html";
+    //cookie=value; expires=UTCStringDate; path=/
+    document.cookie.window.location.href = "game.html";
   });
 }

@@ -4,44 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="./js/controler.js" defer></script>
-    <script src="./js/game-controler.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/core.js" defer></script>
 
-    <link rel="stylesheet" href="./game-style.css">
-    
+    <link rel="stylesheet" href="./game-style.css" />
+
     <title>Jogo da Velha</title>
   </head>
   <body>
-    <header>
-      <h1>Jogo da Velha</h1>
-    </header>
     <main>
       <section id="scoreboard">
-        <p id="player1">Greg</p>
+        <p id="player1Name"></p>
         <article id="scores-box">
           <p id="player1-score">0</p>
           <span>-</span>
           <p id="player2-score">0</p>
         </article>
-        <p id="player2">Rowley</p>
+        <p id="player2Name"></p>
       </section>
-      <section class="game-board">
+      <section id="game-board">
         <article class="column">
           <div class="cell" id="A0"></div>
           <div class="cell" id="A1"></div>
           <div class="cell" id="A2"></div>
         </article>
         <article class="column">
+          <div class="cell" id="B0"></div>
           <div class="cell" id="B1"></div>
           <div class="cell" id="B2"></div>
-          <div class="cell" id="B3"></div>
         </article>
         <article class="column">
+          <div class="cell" id="C0"></div>
           <div class="cell" id="C1"></div>
           <div class="cell" id="C2"></div>
-          <div class="cell" id="C3"></div>
         </article>
       </section>
+      <button id="next-round">Próxima Rodada</button>
     </main>
     <footer>
       <p>&copy; 2023 TicTacToe Game By Pedro Soares</p>
