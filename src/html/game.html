@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="../../public/scripts/core.bundle.min.js" type="module" defer></script>
+
+    <link rel="stylesheet" href="../../public/scripts/core.bundle.min.js" />
+
+    <title>Jogo da Velha</title>
+  </head>
+  <body>
+    <main id="main">
+      <article id="game_screen">
+        <section id="scoreboard">
+          <p id="player1Name"></p>
+          <!--
+        <article id="scores-box">
+          <p id="player1-score">0</p>
+          <span>-</span>
+          <p id="player2-score">0</p>
+        </article>
+        -->
+          <p id="player2Name"></p>
+        </section>
+        <section id="game_board">
+          <article class="column">
+            <div class="cell" id="A0"></div>
+            <div class="cell" id="A1"></div>
+            <div class="cell" id="A2"></div>
+          </article>
+          <article class="column">
+            <div class="cell" id="B0"></div>
+            <div class="cell" id="B1"></div>
+            <div class="cell" id="B2"></div>
+          </article>
+          <article class="column">
+            <div class="cell" id="C0"></div>
+            <div class="cell" id="C1"></div>
+            <div class="cell" id="C2"></div>
+          </article>
+        </section>
+      </article>
+      <button id="next_round">Próxima Rodada</button>
+    </main>
+    <footer>
+      <p>&copy; 2023 TicTacToe Game By Pedro Soares</p>
+    </footer>
+  </body>
+</html>

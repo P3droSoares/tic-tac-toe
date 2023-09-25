@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="../../public/scripts/index.bundle.min.js" type="module" defer></script>
+
+    <link rel="stylesheet" href="../../public/style/index.css" />
+
+    <title>TicTacToe</title>
+  </head>
+  <body>
+    <h1 id="title">TicTacToe</h1>
+    <form id="form">
+      <!-- CHALLENGER -->
+      <section id="challenger">
+        <div class="name_container">
+          <label class="name_label" for="challenger_name">Desafiante</label>
+          <input
+            type="text"
+            id="challenger_name"
+            required
+            autocomplete="off"
+            class="players_name_input"
+          />
+        </div>
+        <article class="piece_container">
+          <article id="X_piece_container">
+            <div>
+              <label for="X_piece_challenger">
+                <img src="./assets/X_Piece.svg" class="piece_img" />
+              </label>
+              <input
+                type="radio"
+                name="challenger_piece"
+                id="X_piece_challenger"
+                class="piece_input"
+                value="./assets/X_Piece.svg"
+              />
+            </div>
+          </article>
+          <article id="O_piece_container">
+            <div>
+              <label for="O_piece_challenger">
+                <img src="./assets/O_Piece.svg" class="piece_img" />
+              </label>
+              <input
+                type="radio"
+                name="challenger_piece"
+                id="O_piece_challenger"
+                class="piece_input"
+                value="./assets/O_Piece.svg"
+              />
+            </div>
+          </article>
+        </article>
+      </section>
+      <!-- OPPONENT -->
+      <section id="opponent">
+        <div class="name_container">
+          <label class="name_label" for="opponent">Oponente</label>
+          <input
+            type="text"
+            id="opponent_name"
+            required
+            autocomplete="off"
+            class="players_name_input"
+          />
+        </div>
+        <article class="piece_container">
+          <article id="X_piece_container">
+            <div>
+              <label for="X_piece_opponent">
+                <img src="./assets/X_Piece.svg" class="piece_img" />
+              </label>
+              <input
+                type="radio"
+                name="opponent_piece"
+                id="X_piece_opponent"
+                class="piece_input"
+                value="./assets/X_Piece.svg"
+              />
+            </div>
+          </article>
+          <article id="O_piece_container">
+            <div>
+              <label for="O_piece_opponent">
+                <img src="./assets/O_Piece.svg" class="piece_img" />
+              </label>
+              <input
+                type="radio"
+                name="opponent_piece"
+                id="O_piece_opponent"
+                class="piece_input"
+                value="./assets/O_Piece.svg"
+              />
+            </div>
+          </article>
+        </article>
+      </section>
+      <button type="submit" id="start_btn">INICIAR</button>
+    </form>
+  </body>
+</html>
