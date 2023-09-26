@@ -1,12 +1,12 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, "./src/html/"),
-    },
-    port: 5500,
+  devServer:{
+    static:{
+      directory: path.resolve(__dirname, "public/view/")
+    }
   },
   entry: {
     index: "./src/scripts/index.js",
@@ -21,17 +21,41 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: "babel-loader",
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+            
+          },
+        },
       },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test:/\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
+      },
+      {
+        test: /\.svg$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "../assets/img/[name].[ext]",
+          },
+        },
       },
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: "../style/[name].css",
+    new HtmlPlugin({
+      filename: "../view/index.html",
+      template: "./src/view/index.html",
     }),
+    new HtmlPlugin({
+      filename: "../view/game.html",
+      template: "./src/view/game.html",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "../stylesheets/[name].min.css"
+    })
   ],
 };

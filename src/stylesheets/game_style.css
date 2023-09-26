@@ -10,7 +10,7 @@
 
   color: #3c4952;
 }
-body {
+#body {
   width: 100vw;
   height: 100vh;
   padding-top: 1rem;
@@ -24,6 +24,11 @@ body {
   gap: 22%;
 
   background-color: #f7f7f7;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #scoreboard {
   margin-bottom: 1rem;
@@ -61,13 +66,13 @@ body {
 
   box-shadow: 0 0 10px #e4e3e3;
 
-  background-image: url("../assets/grid.svg");
+  background-image: url("../assets/img/grid.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 90%;
   background-color: #fdfdfd;
 }
-.cell {
+.slot {
   width: 10rem;
   height: 10rem;
 
@@ -79,11 +84,28 @@ body {
 
   /*border: 1px solid black;*/
 }
-.cell > img {
+.slot > img {
   width: 5rem;
 }
 .active {
   font-size: 24px;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 0.3rem;
+}
+#footer_icon {
+  width: 1rem;
+}
+
+#win_screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 #next_round {
   width: 10rem;
@@ -99,4 +121,8 @@ body {
 
   color: #fff;
   background-color: #3c75ff;
+}
+#win_title {
+  font-weight: 700;
+  font-size: 3rem;
 }

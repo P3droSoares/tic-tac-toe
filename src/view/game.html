@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="../../public/scripts/core.bundle.min.js" type="module" defer></script>
+    <script src="../scripts/core.js" type="module" defer></script>
 
-    <link rel="stylesheet" href="../../public/scripts/core.bundle.min.js" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/sodascripts_logo_v1_20230926.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../stylesheets/game_style.css" />
 
     <title>Jogo da Velha</title>
   </head>
-  <body>
+  <body id="body">
     <main id="main">
       <article id="game_screen">
         <section id="scoreboard">
@@ -26,26 +31,25 @@
         </section>
         <section id="game_board">
           <article class="column">
-            <div class="cell" id="A0"></div>
-            <div class="cell" id="A1"></div>
-            <div class="cell" id="A2"></div>
+            <div class="slot" id="A0" data-=""></div>
+            <div class="slot" id="A1"></div>
+            <div class="slot" id="A2"></div>
           </article>
           <article class="column">
-            <div class="cell" id="B0"></div>
-            <div class="cell" id="B1"></div>
-            <div class="cell" id="B2"></div>
+            <div class="slot" id="B0"></div>
+            <div class="slot" id="B1"></div>
+            <div class="slot" id="B2"></div>
           </article>
           <article class="column">
-            <div class="cell" id="C0"></div>
-            <div class="cell" id="C1"></div>
-            <div class="cell" id="C2"></div>
+            <div class="slot" id="C0"></div>
+            <div class="slot" id="C1"></div>
+            <div class="slot" id="C2"></div>
           </article>
         </section>
       </article>
-      <button id="next_round">Próxima Rodada</button>
     </main>
     <footer>
-      <p>&copy; 2023 TicTacToe Game By Pedro Soares</p>
+      <p>&copy; 2023 TicTacToe Game By SodaScripts</p>
     </footer>
   </body>
 </html>

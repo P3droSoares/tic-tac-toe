@@ -1,5 +1,9 @@
-import { saveCookie } from "./cookie_manager";
-import "../style/index_style.css"
+import { saveCookie } from "./cookie_manager.js";
+import XPiece from "../assets/img/X_Piece.svg";
+import OPiece from "../assets/img/O_Piece.svg";
+import Grid from "../assets/img/grid.svg";
+import icon from "../assets/img/sodascripts_logo_v1_20230926.svg";
+import "../stylesheets/index_style.css";
 
 const startBtn = document.getElementById("start_btn");
 
@@ -40,13 +44,11 @@ document.getElementById("form").addEventListener("submit", function (event) {
   const players = {
     challenger: {
       name: document.getElementById("challenger_name").value,
-      score: 0,
       piece: document.querySelector("input[name='challenger_piece']:checked")
         .value,
     },
     opponent: {
       name: document.getElementById("opponent_name").value,
-      score: 0,
       piece: document.querySelector("input[name='opponent_piece']:checked")
         .value,
     },

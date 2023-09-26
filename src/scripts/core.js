@@ -1,19 +1,41 @@
-import { getCookie } from "./cookie_manager";
-import "../style/game_style.css";
+import { getCookie } from "./cookie_manager.js";
+import Player from "./player.js";
+import checkWinner from "./checkWinner.js";
+import winRender from "./winRender.js";
+import "../stylesheets/game_style.css";
 
 const playersData = JSON.parse(getCookie("playersData"));
-
-const nextRound = document.getElementById("next_round");
-nextRound.style.display = "none";
 
 document.getElementById("player1Name").innerText = playersData.challenger.name;
 document.getElementById("player2Name").innerText = playersData.opponent.name;
 
-const gameScreen = (document.getElementById("game_screen").style.display =
-  "none");
-const winScreen = document.createElement("section");
-const winPlayer = document.createElement("h1");
-winPlayer.innerText = `${playersData.challenger.name} Venceu!`;
+const challenger = new Player(
+  playersData.challenger.name,
+  playersData.challenger.piece
+);
+const opponent = new Player(
+  playersData.opponent.name,
+  playersData.opponent.piece
+);
 
-winScreen.appendChild(winPlayer);
-document.getElementById("main").append(winScreen);
+const togglePlayer = function (roundControler, challenger, opponent) {
+  return roundControler ? challenger : opponent;
+};
+
+let roundControler = true;
+let currentPlayer = togglePlayer(roundControler, challenger, opponent);
+
+const slots = document.querySelectorAll(".slot");
+slots.forEach((slot) => {
+  slot.addEventListener("click", () => {
+    if (!slot.children.length != 0) {
+      currentPlayer = togglePlayer(roundControler, challenger, opponent);
+      roundControler = !roundControler;
+      currentPlayer.newMove(slot, currentPlayer.piece);
+
+      if (checkWinner(slot, currentPlayer.name)) {
+        winRender(currentPlayer.name);
+      }
+    }
+  });
+});
